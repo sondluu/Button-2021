@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker&family=Varela+Round&display=swap");
 body {
   background: #5D00D6;
   margin: 0;
@@ -5,7 +6,7 @@ body {
   display: grid;
   place-items: center;
   color: white;
-  font-family: 'Poppins';
+  font-family: 'Varela Round', sans-serif;
   height: 100vh;
 }
 
@@ -15,7 +16,6 @@ button {
   color: white;
   position: relative;
   padding: .5em 1em;
-  font-weight: bold;
   font-size: 2em;
   text-align: center;
   border: 2px solid white;
@@ -23,6 +23,7 @@ button {
   border-radius: .2em;
   outline: none;
   width: 10em;
+  font-family: 'Varela Round', sans-serif;
 }
 
 button:before {
@@ -39,7 +40,6 @@ button:before {
 
 p {
   text-align: center;
-  font-weight: bold;
   -webkit-clip-path: circle(0% at 50% 50%);
           clip-path: circle(0% at 50% 50%);
 }

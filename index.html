@@ -21,7 +21,7 @@
 
         </button>
 
-        <p>Next</p>
+        <p>All set !</p>
 
 
         
@@ -34,15 +34,21 @@
 
         gsap.registerPlugin(CSSRulePlugin);
 
-        const tl = gsap.timeline({defaults: { ease: Power2.easeOut, delay: 1}})
+        const tl = gsap.timeline({defaults: { ease: Power2.easeOut, delay: .01}})
               btn = document.querySelector('button');
               rule = CSSRulePlugin.getRule('button::before');
 
         tl.to('.label', {opacity: 0, height: 0, position: 'absolute', duration: '.2s'})
-          .to('button', {borderRadius: '50%', width: '2.5em', height: '2.5em'}, '-=.5s')
+          .to('button', {borderRadius: '50%', width: '2.5em', height: '2.5em', ease: Elastic.easeOut.config(.7, 0.3)}, '-=.05s')
           .to(rule, {borderRadius: '50%'}, "-=1s")
-          .to('svg', {strokeDasharray: '90 103'}, '-=.7')
+          .to('svg', {strokeDasharray: '90 103'}, '-=.2')
+          .to('p', { clipPath: 'circle(100% at 50% 50%)'}, "-=.5");
 
+          tl.pause();
+
+        btn.addEventListener('click', () => {
+        tl.play();
+        })
 
     </script>
     
