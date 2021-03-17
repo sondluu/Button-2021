@@ -1,0 +1,51 @@
+body {
+    background: #5D00D6;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: 'Poppins';
+    height: 100vh; 
+}
+
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    position: relative; //this is important b/c it keeps the below &before position of absolute is relatve to this button default
+    padding: .5em 1em;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: .2em;
+    outline: none;
+    width: 10em;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background: #5000B8;
+        height: 100%;
+        width: 100%;
+        top: .5em;
+        left: .5em;
+        z-index: -1;
+        border-radius: .2em;
+    }
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    clip-path: circle(0% at 50% 50%) //circle effect using GSAP 
+}
+
+svg {
+    position: absolute;
+    top: .7em;
+    left: .5em;
+    stroke-dasharray: 0 103;
+}
