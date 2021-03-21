@@ -30,7 +30,7 @@ button {
 button:before {
   position: absolute;
   content: '';
-  background: #DBB0BF;
+  background: #DCB1C0;
   height: 100%;
   width: 100%;
   top: .5em;
