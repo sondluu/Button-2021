@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Blinker&family=Varela+Round&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 body {
-    background: #5D00D6;
+    background: #F9DE5A;
     margin: 0;
     display: grid;
     place-items: center;
-    color: white;
-    font-family: 'Varela Round', sans-serif;
+    color: #0E1CA7; //color of the text at the end
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
     height: 100vh; 
 }
 
@@ -14,29 +16,29 @@ body {
 button {
     background: none;
     border: none;
-    color: white;
+    color: #0E1CA7; //color of text at the beginning
     position: relative; //this is important b/c it keeps the below &before position of absolute is relatve to this button default
     padding: .5em 1em;
     // font-weight: bold;
     font-size: 2em;
     text-align: center;
-    border: 2px solid white;
+    border: 3px solid #0E1CA7; //border of the button
     cursor: pointer;
-    border-radius: .2em;
+    border-radius: .4em;
     outline: none;
     width: 10em;
-    font-family: 'Varela Round', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
 
     &:before {
         position: absolute;
         content: '';
-        background: #5000B8;
+        background:  #DBB0BF;
         height: 100%;
         width: 100%;
         top: .5em;
         left: .5em;
         z-index: -1;
-        border-radius: .2em;
+        border-radius: .4em;
     }
 }
 
